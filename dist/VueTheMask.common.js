@@ -261,11 +261,13 @@ function directive_event(name) {
   }
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
-    var els = el.querySelectorAll('input:not([type="hidden"])'); // if (els.length !== 1) {
-    //   throw new Error("v-mask directive requires 1 input, found " + els.length)
-    // } else {
+    var els = el.querySelectorAll('input:not([type="hidden"])');
 
-    el = els[0]; // }
+    if (els.length !== 1) {
+      throw new Error("v-mask directive requires 1 input, found " + els.length);
+    } else {
+      el = els[0];
+    }
   }
 
   el.oninput = function (evt) {
