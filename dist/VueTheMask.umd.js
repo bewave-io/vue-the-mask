@@ -46,17 +46,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -76,34 +91,31 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "wmdO");
+/******/ 	return __webpack_require__(__webpack_require__.s = "9fdb");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "FsIF":
-/***/ (function(module, exports, __webpack_require__) {
-
-// This file is imported into lib/wc client bundles.
-
-if (typeof window !== 'undefined') {
-  let i
-  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js$/))) {
-    __webpack_require__.p = i[1] // eslint-disable-line
-  }
-}
-
-
-/***/ }),
-
-/***/ "wmdO":
+/***/ "9fdb":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /home/neves/.config/yarn/global/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
-var setPublicPath = __webpack_require__("FsIF");
+// CONCATENATED MODULE: /usr/lib/node_modules/@vue/cli-service-global/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  if (false) {}
+
+  var i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
+    __webpack_require__.p = i[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
 
 // CONCATENATED MODULE: ./src/tokens.js
 /* harmony default export */ var src_tokens = ({
@@ -126,40 +138,39 @@ var setPublicPath = __webpack_require__("FsIF");
   },
   '!': {
     escape: true
-  } // https://github.com/fernandofleury/vanilla-masker/blob/master/lib/vanilla-masker.js
-  // DIGIT = "9",
-  // ALPHA = "A",
-  // ALPHANUM = "S"
-  // https://github.com/niksmr/vue-masked-input
-  // 1 - number
-  // a - letter
-  // A - letter, forced to upper case when entered
-  // * - alphanumeric
-  // # - alphanumeric, forced to upper case when entered
-  // + - any character
-  // https://github.com/probil/v-mask
-  // #	Number (0-9)
-  // A	Letter in any case (a-z,A-Z)
-  // N	Number or letter
-  // X	Any symbol
-  // https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/src/jquery.mask.js#L518
-  // '0': {pattern: /\d/},
-  // '9': {pattern: /\d/, optional: true},
-  // '#': {pattern: /\d/, recursive: true},
-  // 'A': {pattern: /[a-zA-Z0-9]/},
-  // 'S': {pattern: /[a-zA-Z]/}
-  // https://github.com/the-darc/string-mask
-  // 0	Any numbers
-  // 9	Any numbers (Optional)
-  // #	Any numbers (recursive)
-  // A	Any alphanumeric character
-  // a	Any alphanumeric character (Optional) Not implemented yet
-  // S	Any letter
-  // U	Any letter (All lower case character will be mapped to uppercase)
-  // L	Any letter (All upper case character will be mapped to lowercase)
-  // $	Escape character, used to escape any of the special formatting characters.
-
-});
+  }
+}); // https://github.com/fernandofleury/vanilla-masker/blob/master/lib/vanilla-masker.js
+// DIGIT = "9",
+// ALPHA = "A",
+// ALPHANUM = "S"
+// https://github.com/niksmr/vue-masked-input
+// 1 - number
+// a - letter
+// A - letter, forced to upper case when entered
+// * - alphanumeric
+// # - alphanumeric, forced to upper case when entered
+// + - any character
+// https://github.com/probil/v-mask
+// #	Number (0-9)
+// A	Letter in any case (a-z,A-Z)
+// N	Number or letter
+// X	Any symbol
+// https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/src/jquery.mask.js#L518
+// '0': {pattern: /\d/},
+// '9': {pattern: /\d/, optional: true},
+// '#': {pattern: /\d/, recursive: true},
+// 'A': {pattern: /[a-zA-Z0-9]/},
+// 'S': {pattern: /[a-zA-Z]/}
+// https://github.com/the-darc/string-mask
+// 0	Any numbers
+// 9	Any numbers (Optional)
+// #	Any numbers (recursive)
+// A	Any alphanumeric character
+// a	Any alphanumeric character (Optional) Not implemented yet
+// S	Any letter
+// U	Any letter (All lower case character will be mapped to uppercase)
+// L	Any letter (All upper case character will be mapped to lowercase)
+// $	Escape character, used to escape any of the special formatting characters.
 // CONCATENATED MODULE: ./src/maskit.js
 function maskit(value, mask, masked = true, tokens) {
   value = value || '';
@@ -167,9 +178,10 @@ function maskit(value, mask, masked = true, tokens) {
   var iMask = 0;
   var iValue = 0;
   var output = '';
+  var cMask;
 
   while (iMask < mask.length && iValue < value.length) {
-    var cMask = mask[iMask];
+    cMask = mask[iMask];
     var masker = tokens[cMask];
     var cValue = value[iValue];
 
@@ -198,7 +210,7 @@ function maskit(value, mask, masked = true, tokens) {
   var restOutput = '';
 
   while (iMask < mask.length && masked) {
-    var cMask = mask[iMask];
+    cMask = mask[iMask];
 
     if (tokens[cMask]) {
       restOutput = '';
@@ -258,13 +270,11 @@ function directive_event(name) {
   }
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
-    var els = el.getElementsByTagName('input');
+    var els = el.getElementsByTagName('input'); // if (els.length !== 1) {
+    //   throw new Error("v-mask directive requires 1 input, found " + els.length)
+    // } else {
 
-    if (els.length !== 1) {
-      throw new Error("v-mask directive requires 1 input, found " + els.length);
-    } else {
-      el = els[0];
-    }
+    el = els[0]; // }
   }
 
   el.oninput = function (evt) {
@@ -309,7 +319,14 @@ function directive_event(name) {
     el.dispatchEvent(directive_event('input'));
   }
 });
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/component.vue
+// CONCATENATED MODULE: /usr/lib/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"51023952-vue-loader-template"}!/usr/lib/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/usr/lib/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/lib/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib??vue-loader-options!./src/component.vue?vue&type=template&id=0270a36a&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{directives:[{name:"mask",rawName:"v-mask",value:(_vm.config),expression:"config"}],attrs:{"type":"text"},domProps:{"value":_vm.display},on:{"input":_vm.onInput}})}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/component.vue?vue&type=template&id=0270a36a&
+
+// CONCATENATED MODULE: /usr/lib/node_modules/@vue/cli-service-global/node_modules/thread-loader/dist/cjs.js!/usr/lib/node_modules/@vue/cli-service-global/node_modules/babel-loader/lib??ref--12-1!/usr/lib/node_modules/@vue/cli-service-global/node_modules/cache-loader/dist/cjs.js??ref--0-0!/usr/lib/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib??vue-loader-options!./src/component.vue?vue&type=script&lang=js&
 //
 //
 //
@@ -317,7 +334,7 @@ function directive_event(name) {
 
 
 
-/* harmony default export */ var component = ({
+/* harmony default export */ var componentvue_type_script_lang_js_ = ({
   name: 'TheMask',
   props: {
     value: [String, Number],
@@ -379,7 +396,7 @@ function directive_event(name) {
 
     refresh(value) {
       this.display = value;
-      var value = masker(value, this.mask, this.masked, this.tokens);
+      value = masker(value, this.mask, this.masked, this.tokens);
 
       if (value !== this.lastValue) {
         this.lastValue = value;
@@ -389,11 +406,9 @@ function directive_event(name) {
 
   }
 });
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-1d380615","hasScoped":false,"optionsId":"1","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./src/component.vue
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('input',{directives:[{name:"mask",rawName:"v-mask",value:(_vm.config),expression:"config"}],attrs:{"type":"text"},domProps:{"value":_vm.display},on:{"input":_vm.onInput}})}
-var staticRenderFns = []
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/component-normalizer.js
+// CONCATENATED MODULE: ./src/component.vue?vue&type=script&lang=js&
+ /* harmony default export */ var src_componentvue_type_script_lang_js_ = (componentvue_type_script_lang_js_); 
+// CONCATENATED MODULE: /usr/lib/node_modules/@vue/cli-service-global/node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
 // IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
@@ -410,14 +425,6 @@ function normalizeComponent (
   moduleIdentifier, /* server only */
   shadowMode /* vue-cli only */
 ) {
-  scriptExports = scriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof scriptExports.default
-  if (type === 'object' || type === 'function') {
-    scriptExports = scriptExports.default
-  }
-
   // Vue.extend constructor export interop
   var options = typeof scriptExports === 'function'
     ? scriptExports.options
@@ -437,7 +444,7 @@ function normalizeComponent (
 
   // scopedId
   if (scopeId) {
-    options._scopeId = scopeId
+    options._scopeId = 'data-v-' + scopeId
   }
 
   var hook
@@ -475,7 +482,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functional component in vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -497,32 +504,25 @@ function normalizeComponent (
 }
 
 // CONCATENATED MODULE: ./src/component.vue
-/* script */
 
 
-/* template */
 
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
 
-var Component = normalizeComponent(
-  component,
+
+/* normalize component */
+
+var component = normalizeComponent(
+  src_componentvue_type_script_lang_js_,
   render,
   staticRenderFns,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
+  false,
+  null,
+  null,
+  null
+  
 )
 
-/* harmony default export */ var src_component = (Component.exports);
-
+/* harmony default export */ var src_component = (component.exports);
 // CONCATENATED MODULE: ./src/index.js
 
 
@@ -539,10 +539,10 @@ function install(Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(install);
 }
-// CONCATENATED MODULE: /home/neves/.config/yarn/global/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "TheMask", function() { return src_component; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "mask", function() { return directive; });
-/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "tokens", function() { return src_tokens; });
+// CONCATENATED MODULE: /usr/lib/node_modules/@vue/cli-service-global/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+/* concated harmony reexport TheMask */__webpack_require__.d(__webpack_exports__, "TheMask", function() { return src_component; });
+/* concated harmony reexport mask */__webpack_require__.d(__webpack_exports__, "mask", function() { return directive; });
+/* concated harmony reexport tokens */__webpack_require__.d(__webpack_exports__, "tokens", function() { return src_tokens; });
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src);
@@ -551,6 +551,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /***/ })
 
-/******/ })["default"];
+/******/ });
 });
-//# sourceMappingURL=VueTheMask.umd.js.map

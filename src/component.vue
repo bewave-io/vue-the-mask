@@ -1,5 +1,5 @@
 <template>
-<input type="text" v-mask="config" :value="display" @input="onInput" />
+  <input type="text" v-mask="config" :value="display" @input="onInput" />
 </template>
 
 <script>
@@ -24,13 +24,16 @@ export default {
       default: () => tokens
     }
   },
+
   directives: {mask},
+
   data () {
     return {
       lastValue: null, // avoid unecessary emit when has no change
       display: this.value
     }
   },
+
   watch : {
     value (newValue) {
       if (newValue !== this.lastValue) {
@@ -41,6 +44,7 @@ export default {
       this.refresh(this.display)
     }
   },
+
   computed: {
     config () {
       return {
@@ -50,6 +54,7 @@ export default {
       }
     }
   },
+
   methods: {
     onInput (e) {
       if (e.isTrusted) return // ignore native event
@@ -58,7 +63,7 @@ export default {
 
     refresh (value) {
       this.display = value
-      var value = masker(value, this.mask, this.masked, this.tokens)
+      value = masker(value, this.mask, this.masked, this.tokens)
       if (value !== this.lastValue) {
         this.lastValue = value
         this.$emit('input', value)
