@@ -19,11 +19,11 @@ export default function (el, binding) {
 
   if (el.tagName.toLocaleUpperCase() !== 'INPUT') {
     var els = el.getElementsByTagName('input')
-    if (els.length !== 1) {
-      throw new Error("v-mask directive requires 1 input, found " + els.length)
-    } else {
+    // if (els.length !== 1) {
+    //   throw new Error("v-mask directive requires 1 input, found " + els.length)
+    // } else {
       el = els[0]
-    }
+    // }
   }
 
   el.oninput = function (evt) {
